@@ -1,0 +1,36 @@
+*, ::before, ::after{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    font-family: 'Heebo', sans-serif;
+    background: #0095b0;
+    font-size: 14px;
+    color: #f3ff9b;
+}
+
+.underline_hover{
+    font-size: 90px;
+    text-align: center;
+    margin-top: 400px;
+}
+
+.underline_hover::before{
+    content:'';
+    margin: -5px 6px;
+    height: 10px;
+    width: 325px;
+    transform: scaleX(0);
+    background-color :#f3ff9b;
+    position: absolute;
+    transform-origin: center;
+    transition: transform 0.25s ease-out;
+}
+
+.underline_hover:hover::before{
+    transform: scaleX(1);
+    transform-origin: center;
+}
+
