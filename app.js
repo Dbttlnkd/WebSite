@@ -14,10 +14,17 @@ document.addEventListener('click', () => {
 })
 
 const Title = document.querySelector('.underline_intro')
+const Main = document.querySelector('.underline_intro')
 const bodyScroll = document.querySelector('.main_container')
 
 Title.addEventListener('click', () => {
     console.log("Ca marche !")
     bodyScroll.style.transform ="translateY(-100vh)"
+    bodyScroll.style.transition ='1s'
+})
+
+Main.addEventListener('click', () => {
+    console.log("Ca marche !")
+    bodyScroll.style.transform ="translateY(100vh)"
     bodyScroll.style.transition ='1s'
 })
