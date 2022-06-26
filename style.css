@@ -5,25 +5,26 @@
 }
 
 body{
-    font-family: 'Heebo', sans-serif;
-    background: #0095b0;
+    font-family: 'Roboto', sans-serif;
+    background: #0c3e6b;
     font-size: 14px;
-    color: #f3ff9b;
+    color: #f1ffb8;
 }
 
 .underline_hover{
     font-size: 90px;
     text-align: center;
     margin-top: 400px;
+    letter-spacing: 5px;
 }
 
 .underline_hover::before{
     content:'';
-    margin: -5px 6px;
+    margin: -20px 4px;
     height: 10px;
-    width: 325px;
+    width: 373px;
     transform: scaleX(0);
-    background-color :#f3ff9b;
+    background-color :#f1ffb8;
     position: absolute;
     transform-origin: center;
     transition: transform 0.25s ease-out;
