@@ -1,3 +1,5 @@
+// Gestion du Curseur
+
 const cursor = document.querySelector('.cursor');
 
 document.addEventListener('mousemove', e => {
@@ -12,22 +14,40 @@ document.addEventListener('click', () => {
     }, 2000)
 })
 
-const Title = document.querySelector('.underline_intro')
-const Main = document.querySelector('.main_button')
-const bodyScroll = document.querySelector('.main_container')
-const bodyCheck = document.querySelector('body')
+// Gestion Intro
+
+
+
+// Gestion Scroll
+
+    // Scroll 
+
+const Title = document.querySelector('.intro_container_title')
+const Main = document.querySelector('.main_button')    
+const scrollContainer = document.querySelector('.scroll_container')
 
 Title.addEventListener('click', () => {
-    bodyScroll.style.transform ="translateY(-100vh)"
-    bodyScroll.style.transition ='1s'
+    scrollContainer.style.transform ="translateY(-100vh)"
+    scrollContainer.style.transition ='1s'
 })
 
 Main.addEventListener('click', () => {
-    bodyScroll.style.transform ="translateY(0vh)"
-    bodyScroll.style.transition ='1s'
+    scrollContainer.style.transform ="translateY(0vh)"
+    scrollContainer.style.transition ='1s'
 })
 
-bodyCheck.addEventListener('scroll', () => {
+    // Arrêt Scroll 
+
+const stopScroll = document.querySelector('body')
+
+stopScroll.addEventListener('scroll', () => {
     console.log("Stop Scroll")
-    bodyScroll.style.transition ='0s'
+    scrollContainer.style.transition = '0s'
+})
+
+const stopScrollBis = document.querySelector('main_container')
+
+stopScrollBis.addEventListener('scroll', () => {
+    console.log("Stop Scroll")
+    scrollContainer.style.transition = '0s'
 })
