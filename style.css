@@ -9,7 +9,13 @@ body{
     background: #0c3e6b;
     font-size: 14px;
     color: #f1ffb8;
-    cursor: none;
+    /* cursor: none; */
+    overflow: hidden;
+}
+
+a{
+    text-decoration: none;
+    color: #f1ffb8;
 }
 
 .container{
@@ -20,17 +26,15 @@ body{
     height: 100vh;
 }
 
-.underline_hover{
+.underline{
     font-size: 90px;
     letter-spacing: 5px;
-    cursor: none;
 }
 
-.underline_hover::before{
+.underline::before{
     content:'';
     margin: -20px 4px;
     height: 10px;
-    width: 373px;
     transform: scaleX(0);
     background-color :#f1ffb8;
     position: absolute;
@@ -38,17 +42,26 @@ body{
     transition: transform 0.25s ease-out;
 }
 
-.underline_hover:hover::before{
+.underline_intro::before{
+    width: 373px;
+}
+
+.underline_main::before{
+    width: 232px;
+}
+
+.underline:hover::before{
     transform: scaleX(1);
     transform-origin: center;
 }
 
 .cursor {
-    width: 20px;
+    z-index: 10;
+    Width: 20px;
     height: 20px;
     border: 1px solid white;
     background-color: #f1ffb8;
-    mix-blend-mode: difference;
+    mix-blend-mode:difference;
     border-radius: 50%;
     position: absolute;
     pointer-events: none;
@@ -70,4 +83,19 @@ body{
 .expand {
     animation: cursorAnim .5s ease-in-out;
     border: .5px solid rgb(0, 0, 0);
+}
+
+@keyframes transitionIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 100%;
+    }
+}
+
+@media (max-width : 760px) {
+    .underline {
+        font-size: 70px;
+    }
 }
