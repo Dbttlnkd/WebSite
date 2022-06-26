@@ -14,7 +14,7 @@ document.addEventListener('click', () => {
 })
 
 const Title = document.querySelector('.underline_intro')
-const Main = document.querySelector('.underline_intro')
+const Main = document.querySelector('.underline_main')
 const bodyScroll = document.querySelector('.main_container')
 
 Title.addEventListener('click', () => {
